@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import MyNewContext from "../context/MyContext";
+import { MyNewContext } from "../context/MyContext";
 const AddTodo = () => {
   const { dispatch } = useContext(MyNewContext);
   return (

@@ -1,6 +1,7 @@
 import React from "react";
-import { Navbar, Container, Nav, NavLink } from "react-bootstrap";
-const NavbarComp = () => {
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+function NavbarComp() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -25,6 +26,6 @@ const NavbarComp = () => {
       </Container>
     </Navbar>
   );
-};
+}
 
 export default NavbarComp;

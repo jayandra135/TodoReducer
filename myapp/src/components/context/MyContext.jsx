@@ -18,7 +18,7 @@ const reducer = (state, action) => {
   }
 };
 
-const MyContext = ({ Children }) => {
+const MyContext = ({ children }) => {
   const initialValue = {
     inputText: "",
     todo: [],
@@ -27,7 +27,7 @@ const MyContext = ({ Children }) => {
   return (
     <>
       <MyNewContext.Provider value={{ state, dispatch }}>
-        {Children}
+        {children}
       </MyNewContext.Provider>
     </>
   );
