@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { MyNewContext } from "./context/MyContext";
+
 function NavbarComp() {
+  const { state } = useContext(MyNewContext);
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -19,7 +23,7 @@ function NavbarComp() {
               List-Todo
             </NavLink>
             <NavLink className="nav-link" to="/counter">
-              Counter
+              Counter({state.todo.length})
             </NavLink>
           </Nav>
         </Navbar.Collapse>
